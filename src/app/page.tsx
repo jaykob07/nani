@@ -10,27 +10,27 @@ import { useState } from "react"
 const bestSellers = [
   {
     id: 1,
-    name: "Cartera para la noche",
+    name: "Labiales",
     price: "$45.000",
-    image: "/images/home-cartera.jpeg"
+    image: "/images/img3.jpeg",
   },
   {
     id: 2,
-    name: "Collar Indu",
+    name: "Maquillalje",
     price: "$32.00",
-    image: "/images/collar-indu4.jpeg",
+    image: "/images/img1.jpeg",
   },
   {
     id: 3,
-    name: "Corona",
+    name: "Ceras",
     price: "$38.00",
-    image: "/images/corona.png",
+    image: "/images/img2.jpeg",
   },
   {
     id: 4,
-    name: "Collar Chunky",
+    name: "Cabello",
     price: "$28.00",
-    image: "/images/collar-chunky.jpeg",
+    image: "/images/img4.jpeg",
   },
 ]
 
@@ -46,81 +46,61 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-cover bg-center bg-[#FBE6E2]" >
       {/* Hero Section */}
-      <section className="relative min-h-[600px] sm:min-h-[700px] lg:min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#FFB5A7]/10 to-white">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=1600&q=80')] bg-cover bg-center opacity-10" />
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-4 sm:mb-6 animate-fade-in leading-tight">
-            Brilla con un toque mas
 
-          </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-            Fabricantes e importadores de accesorios únicos que realzan tu belleza natural
+      {/* <section className="relative min-h-[600px] bg-[url('/images/nanidef.png')] bg-cover bg-center sm:min-h-[700px] lg:min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#FFB5A7]/10 to-white"> */}
+      <section
+        className="
+          relative min-h-[600px]
+          bg-[url('/images/nanidef.png')]
+          bg-[length:180%]
+          sm:bg-cover
+          bg-center
+          sm:min-h-[700px]
+          lg:min-h-screen
+          flex 
+          flex-col               
+          justify-end           
+          items-center
+          bg-gradient-to-br
+          from-white via-[#FFB5A7]/10 to-white
+          pb-10
+        "
+      >
+
+
+        {/* <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8  text-center pb-22 sm:pb-28 lg:pb-36"> */}
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8 sm:pt-12">
+          <p className="font-[Poppins]  text-lg sm:text-xl md:text-2xl text-gray-600  mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+            Nani Makeup productos que realzan tu belleza natural
           </p>
-          <Link 
-            // 🎯 CAMBIO 1: Nueva URL de WhatsApp con el mensaje de compra
+
+          <Link
             href="https://wa.me/573187949929?text=Quiero%20informacion%20sobre%20sus%20productos%20para%20comprar%20ahora"
-            target="_blank" 
-            rel="noopener noreferrer" 
+            target="_blank"
+            rel="noopener noreferrer"
           >
+
             <Button
               size="lg"
               className="bg-[#FCBAA0] hover:bg-[#E96A59] text-white rounded-full px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-medium shadow-lg hover:shadow-xl transition-all"
             >
-              {/* 🎯 CAMBIO 2: Texto del botón ajustado (Opcional) */}
-              ¡Hablemos de mi compra!
-              {/* Puedes mantener el ícono ArrowRight si quieres */}
+              ¡Exploremos Juntas!
               <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
             </Button>
           </Link>
         </div>
-      </section>
 
+      </section>
       {/* Retail vs Wholesale Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-center text-black mb-8 sm:mb-12 lg:mb-16 px-4">
-            ¿Cómo Prefieres Comprar?
+          <h2 className="font-[Poppins]  text-3xl sm:text-4xl md:text-5xl font-bold text-center text-black mb-8 sm:mb-12 lg:mb-16 px-4">
+            ¿Deseas Comprar o Emprender?
           </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
-            {/* Retail Card */}
 
-            <Card className="p-6 sm:p-8 hover:shadow-2xl transition-shadow duration-300 border-2 border-transparent hover:border-[#FA8072]">
-              <div className="flex justify-center mb-4 sm:mb-6">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#FA8072]/10 flex items-center justify-center">
-                  <Users className="w-7 h-7 sm:w-8 sm:h-8 text-[#FCBAA0]" />
-
-                </div>
-              </div>
-              <h3 className="font-display text-xl sm:text-2xl font-bold text-center mb-3 sm:mb-4">Al Detal</h3>
-              <p className="text-gray-600 text-center mb-4 sm:mb-6 text-sm sm:text-base">
-                Perfectos para ti. Compra las piezas que amas y destaca con accesorios únicos.
-              </p>
-
-              <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
-                <li className="flex items-center text-gray-700 text-sm sm:text-base">
-                  <Star className="w-4 h-4 sm:w-5 sm:h-5 text-[#FCBAA0] mr-2 shrink-0" />
-                  <span>Envío gratis en compras mayores a $50</span>
-                </li>
-                <li className="flex items-center text-gray-700 text-sm sm:text-base">
-                  <Star className="w-4 h-4 sm:w-5 sm:h-5 text-[#FCBAA0] mr-2 shrink-0" />
-                  <span>Garantía de calidad</span>
-                </li>
-                <li className="flex items-center text-gray-700 text-sm sm:text-base">
-                  <Star className="w-4 h-4 sm:w-5 sm:h-5 text-[#FCBAA0] mr-2 shrink-0" />
-                  <span>Devoluciones fáciles</span>
-                </li>
-              </ul>
-              <Link href="/galeria" className="block">
-                <Button className="w-full bg-[#FCBAA0] hover:bg-[#E96A59] text-white rounded-full text-sm sm:text-base py-5 sm:py-6">
-
-                  Explorar Colección
-                </Button>
-              </Link>
-            </Card>
-
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {/* Wholesale Card */}
             <Card className="p-6 sm:p-8 hover:shadow-2xl transition-shadow duration-300 border-2 border-transparent hover:border-black">
               <div className="flex justify-center mb-4 sm:mb-6">
@@ -128,8 +108,8 @@ export default function Home() {
                   <Store className="w-7 h-7 sm:w-8 sm:h-8 text-black" />
                 </div>
               </div>
-              <h3 className="font-display text-xl sm:text-2xl font-bold text-center mb-3 sm:mb-4">
-                Al Por Mayor o Dropshipping
+              <h3 className="font-[Poppins] text-xl sm:text-2xl font-bold text-center mb-3 sm:mb-4">
+                Al Por Mayor
               </h3>
               <p className="text-gray-600 text-center mb-4 sm:mb-6 text-sm sm:text-base">
                 ¿Tienes tienda o vendes en línea? Accede a precios exclusivos por volumen y lleva tu negocio al siguiente nivel.
@@ -161,10 +141,10 @@ export default function Home() {
       {/* Best Sellers Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-center text-black mb-3 sm:mb-4 px-4">
+          <h2 className="font-[Poppins] text-3xl sm:text-4xl md:text-5xl font-bold text-center text-black mb-3 sm:mb-4 px-4">
             Los Más Vendidos
           </h2>
-          <p className="text-center text-gray-600 mb-8 sm:mb-12 lg:mb-16 text-base sm:text-lg">
+          <p className="font-[Poppins] text-center text-gray-600 mb-8 sm:mb-12 lg:mb-16 text-base sm:text-lg">
             Descubre nuestras piezas favoritas
           </p>
 
@@ -234,9 +214,8 @@ export default function Home() {
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   aria-label={`Ir al producto ${index + 1}`}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    index === currentSlide ? "bg-[#FCBAA0] w-8" : "bg-gray-300"
-                  }`}
+                  className={`w-2 h-2 rounded-full transition-all ${index === currentSlide ? "bg-[#FCBAA0] w-8" : "bg-gray-300"
+                    }`}
                 />
               ))}
             </div>
@@ -246,14 +225,14 @@ export default function Home() {
 
       {/* CTA Section */}
 
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#FCBAA0]">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#FBE6E295]">
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 px-4">
+          <h2 className="font-[Poppins] text-3xl sm:text-4xl md:text-5xl font-bold text-gray-600 mb-4 sm:mb-6 px-4">
             ¿Lista para Brillar?
           </h2>
-          <p className="text-white/90 text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-            Explora nuestra colección completa y encuentra el accesorio perfecto para ti.
+          <p className="font-[Poppins] text-gray-600 text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+            Explora.
           </p>
           <Link href="/galeria">
             <Button
@@ -261,7 +240,7 @@ export default function Home() {
 
               className="bg-white text-[#FCBAA0] hover:bg-gray-100 rounded-full px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-medium"
             >
-              Ver Galería
+              Ver
               <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
             </Button>
           </Link>
@@ -270,3 +249,39 @@ export default function Home() {
     </div>
   )
 }
+
+
+
+
+
+
+
+//  <section className="relative min-h-[600px]   sm:min-h-[700px] lg:min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#FFB5A7]/10 to-white">
+//       <div className="absolute inset-0 bg-[url('/images/fondo-nani1.jpg')] bg-cover bg-cover bg-center opacity-90" />
+//       <div className="relative z-10 container bg-cover bg-center mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+
+//         <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-4 sm:mb-6 animate-fade-in leading-tight">
+//           Brilla con un toque mas
+
+//         </h1>
+//         <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+//           importadores de productos únicos que realzan tu belleza natural
+//         </p>
+//         <Link
+//           // 🎯 CAMBIO 1: Nueva URL de WhatsApp con el mensaje de compra
+//           href="https://wa.me/573187949929?text=Quiero%20informacion%20sobre%20sus%20productos%20para%20comprar%20ahora"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           <Button
+//             size="lg"
+//             className="bg-[#FCBAA0] hover:bg-[#E96A59] text-white rounded-full px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-medium shadow-lg hover:shadow-xl transition-all"
+//           >
+//             {/* 🎯 CAMBIO 2: Texto del botón ajustado (Opcional) */}
+//             ¡Hablemos de mi compra!
+//             {/* Puedes mantener el ícono ArrowRight si quieres */}
+//             <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+//           </Button>
+//         </Link>
+//       </div>
+//     </section>

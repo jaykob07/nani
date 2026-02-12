@@ -7,8 +7,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "OneMore - Accesorios de Moda Femenina",
-  description: "Accesorios de moda femenina al detal y por mayor. Joyería y complementos elegantes.",
+  title: "Nani - Belleza Femenina",
+  description: "Productos de belleza al detal y por mayor.",
 };
 
 export default function RootLayout({
@@ -22,6 +22,7 @@ export default function RootLayout({
         <ErrorReporter />
         <Script
           src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts//route-messenger.js"
+         
           strategy="afterInteractive"
           data-target-origin="*"
           data-message-type="ROUTE_CHANGE"

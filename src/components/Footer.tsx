@@ -2,28 +2,18 @@
 
 import Link from "next/link"
 import { ShoppingBag, Instagram, Facebook, Mail } from "lucide-react"
-import Image from "next/image" 
+import Image from "next/image"
+import { FaInstagram, FaTiktok, FaFacebookF, FaMapPin, FaPhoneVolume  } from 'react-icons/fa';
+import { MdMailOutline } from 'react-icons/md';
+
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-12 sm:py-16">
+    <footer className="  bg-[url('/images/nanidef.png')] bg-cover bg-center text-white py-12 sm:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
           {/* Brand */}
-          <div className="space-y-3 sm:space-y-4">
-            {/* 🎯 AQUI: Se agregó la clase bg-white para el fondo del círculo */}
-            <Image
-              src="/images/one-more-nav.png" // ⬅️ CAMBIA ESTA RUTA
-              alt="Logo de la Marca OneMore"
-              width={100} // ⬅️ Ajusta el ancho (ej. 100px)
-              height={100} // ⬅️ Ajusta el alto (ej. 100px) - ¡Mismo valor que el ancho!
-              className="rounded-full object-cover aspect-square bg-white" // ⬅️ Clases para la forma circular, ajuste Y FONDO BLANCO
-            />
-            
-            <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
-              Accesorios de moda femenina que complementan tu estilo único.
-            </p>
-          </div>
+          
 
           {/* Quick Links */}
           <div>
@@ -84,33 +74,42 @@ export default function Footer() {
             <h3 className="font-display font-semibold text-base sm:text-lg mb-3 sm:mb-4">Síguenos</h3>
             <div className="flex space-x-3 sm:space-x-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/nani_makeup_18/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gray-800 hover:bg-[#FCBAA0] transition-colors flex items-center justify-center"
                 aria-label="Instagram"
               >
-                <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
+                <FaInstagram className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/nanimakeup/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gray-800 hover:bg-[#FCBAA0] transition-colors flex items-center justify-center"
                 aria-label="Facebook"
               >
-                <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
+                <FaFacebookF className="w-4 h-4 sm:w-5 sm:h-5" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@nani.makeup.18"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gray-800 hover:bg-[#FCBAA0] transition-colors flex items-center justify-center"
+                aria-label="Facebook"
+              >
+                <FaTiktok className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <a
                 href="mailto:info@onemore.com"
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gray-800 hover:bg-[#FCBAA0] transition-colors flex items-center justify-center"
                 aria-label="Email"
               >
-                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+                <MdMailOutline className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             </div>
             <p className="text-gray-400 text-xs sm:text-sm mt-3 sm:mt-4">
-              @onemore.accesorios
+              nanicosmeticos2024@gmail.com
             </p>
           </div>
         </div>
@@ -118,7 +117,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-6 sm:pt-8">
           <p className="text-center text-gray-400 text-xs sm:text-sm">
-            © {new Date().getFullYear()} OneMore. Todos los derechos reservados.
+            © {new Date().getFullYear()} Nani Makeup. Todos los derechos reservados. Powered by Adsvanced
           </p>
         </div>
       </div>

@@ -7,6 +7,9 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Mail, Phone, MapPin, Instagram, Send } from "lucide-react"
+import { FaInstagram, FaTiktok, FaFacebookF, FaMapPin, FaPhoneVolume  } from 'react-icons/fa';
+import { MdMailOutline } from 'react-icons/md';
+
 
 export default function ContactoPage() {
   const [formData, setFormData] = useState({
@@ -40,13 +43,13 @@ export default function ContactoPage() {
 
   return (
     <div className="min-h-screen mt-16 pt-20 sm:pt-24 pb-12 sm:pb-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container bg-[url('/images/nanidef.png')] bg-cover bg-center mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-4 sm:mb-6">
+        <div className="text-center pt-10 mb-12 sm:mb-16">
+          <h1 className="font-[Poppins] text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-4 sm:mb-6">
             Contáctanos
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+          <p className="font-[Poppins] text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
             ¿Tienes preguntas? Nos encantaría escucharte. Completa el formulario y te responderemos pronto.
           </p>
         </div>
@@ -149,12 +152,12 @@ export default function ContactoPage() {
             <Card className="p-6 hover:shadow-lg transition-shadow">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 rounded-full bg-[#FA8072]/10 flex items-center justify-center shrink-0">
-                  <Mail className="w-6 h-6 text-[#FCBAA0]" />
+                  <MdMailOutline className="w-6 h-6 text-[#FCBAA0]" />
                 </div>
                 <div>
                   <h3 className="font-display text-lg sm:text-xl font-bold mb-2">Email</h3>
-                  <p className="text-gray-600 text-sm sm:text-base">info@onemore.com</p>
-                  <p className="text-gray-600 text-sm sm:text-base">ventas@onemore.com</p>
+                  <p className="text-gray-600 text-sm sm:text-base">nanicosmeticos2024@gmail.com</p>
+                  
                 </div>
               </div>
             </Card>
@@ -162,7 +165,7 @@ export default function ContactoPage() {
             <Card className="p-6 hover:shadow-lg transition-shadow">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 rounded-full bg-[#FA8072]/10 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-[#FCBAA0]" />
+                  <FaPhoneVolume className="w-6 h-6 text-[#FCBAA0]" />
                 </div>
                 <div>
                   <h3 className="font-display text-lg sm:text-xl font-bold mb-2">Teléfono</h3>
@@ -175,12 +178,12 @@ export default function ContactoPage() {
             <Card className="p-6 hover:shadow-lg transition-shadow">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 rounded-full bg-[#FA8072]/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-[#FCBAA0]" />
+                  <FaMapPin className="w-6 h-6 text-[#FCBAA0]" />
                 </div>
                 <div>
                   <h3 className="font-display text-lg sm:text-xl font-bold mb-2">Ubicación</h3>
-                  <p className="text-gray-600 text-sm sm:text-base">Centro Comercial Cali Mio</p>
-                  <p className="text-gray-600 text-sm sm:text-base">cr 9 # 13- 135 C.c Cali mio - Piso 3/local 303</p>
+                  <p className="text-gray-600 text-sm sm:text-base">Centro Comercial Shangai</p>
+                  <p className="text-gray-600 text-sm sm:text-base">Cc.Shanghai primer piso 122-B</p>
                 </div>
               </div>
             </Card>
@@ -188,17 +191,20 @@ export default function ContactoPage() {
             <Card className="p-6 hover:shadow-lg transition-shadow">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 rounded-full bg-[#FA8072]/10 flex items-center justify-center flex-shrink-0">
-                  <Instagram className="w-6 h-6 text-[#FCBAA0]" />
+                  <FaInstagram className="w-6 h-6 text-[#FCBAA0]" /> 
+                </div>
+                 <div className="w-12 h-12 rounded-full bg-[#FA8072]/10 flex items-center justify-center flex-shrink-0">
+                  <FaFacebookF className="w-6 h-6 text-[#FCBAA0]" /> 
                 </div>
                 <div>
                   <h3 className="font-display text-lg sm:text-xl font-bold mb-2">Redes Sociales</h3>
                   <a
-                    href="https://www.instagram.com/onemore__marioaguirre/"
+                    href="https://www.instagram.com/nani_makeup_18/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#FCBAA0] hover:text-[#E96A59] transition-colors"
                   >
-                    @onemore__marioaguirre
+                    @nanimakeup
                   </a>
                   <p className="text-xs sm:text-sm text-gray-500 mt-1">Síguenos para ver novedades</p>
                 </div>
